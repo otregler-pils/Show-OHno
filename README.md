@@ -4,6 +4,8 @@ A reporter plugin for [Glyphs 3](https://glyphsapp.com). It shows a small spacin
 
 With `x` selected, the card shows the glyph in a control string such as `HHxHnxnn`, set in the current master, with kerning applied. The card is centred on the glyph's body and stays out of the way of the outline.
 
+![Spacing Preview](images/showohno.png)
+
 ## Installation
 
 Download or clone this repository and double-click `ShowOHno.glyphsReporter`. Glyphs will install it into `~/Library/Application Support/Glyphs 3/Plugins/`. Restart Glyphs.
