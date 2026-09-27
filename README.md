@@ -4,7 +4,7 @@ A plugin for [Glyphs 3 and 4](https://glyphsapp.com). It turns the preview panel
 
 With `x` selected, the preview shows the glyph in a control string such as `HHxHnxnn`, set in the current master. *Show OHno* sits in the preview bar's instance menu next to *Show All Instances*, so switching between the spacing proof and your instances is one click.
 
-![Spacing Preview](images/showohno.png)
+![Spacing Preview](images/showohno2.png)
 
 ## Installation
 
