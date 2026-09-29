@@ -6,17 +6,17 @@ With `x` selected, the preview shows the glyph in a control string such as `HHxH
 
 ## Installation
 
-Download or clone this repository and double-click `ShowOHno.glyphsReporter`. Glyphs will install it into `~/Library/Application Support/Glyphs 3/Plugins/` (or `Glyphs 4/Plugins/`). Restart Glyphs.
+Download or clone this repository and double-click `ShowOHno.glyphsReporter`. Glyphs will install it into `~/Library/Application Support/Glyphs 4/Plugins/` (or `Glyphs 3/Plugins/`). Restart Glyphs.
 
 If you tried a 2.0 test build, delete `ShowOHno.glyphsPlugin` from the Plugins folder first.
 
 If macOS blocks the plugin, run:
 
 ```
-xattr -cr ~/Library/Application\ Support/Glyphs\ 3/Plugins/ShowOHno.glyphsReporter
+xattr -cr ~/Library/Application\ Support/Glyphs\ 4/Plugins/ShowOHno.glyphsReporter
 ```
 
-For Glyphs 4, use `Glyphs\ 4` in the path.
+For Glyphs 3, use `Glyphs\ 3` in the path.
 
 ## Usage
 
@@ -25,7 +25,7 @@ For Glyphs 4, use `Glyphs\ 4` in the path.
 3. To use another string, pick it in **OHno String** right below, or in the Edit View context menu (right-click).
 4. To get back, choose *Show All Instances*, an instance or *-* in the same menu, as usual.
 
-The preview's size, black/white, blur and flip settings apply. In Glyphs versions with the reporter preview API the proof is drawn through it; in older versions (e.g. Glyphs 3.5) the plugin draws it in place of the preview. Kerning is applied, and a line wider than the panel shrinks to fit. Like any reporter, Show OHno stays on after Glyphs restarts.
+In Glyphs 4 the proof replaces the preview text through Glyphs' reporter preview API and is centred so that accents above caps and below the baseline stay inside the panel. Glyphs 3 has no such API, so there the plugin draws the proof in a view placed over the preview, following its size, baseline, black/white, blur and flip settings. Kerning is applied in both. Like any reporter, Show OHno stays on after Glyphs restarts.
 
 If stylistic sets or other features are active in the Edit View (Features menu, bottom left), the control glyphs are replaced by their alternates, e.g. `n` → `n.ss01`. This works with the usual suffix naming; the feature code itself is not interpreted.
 
@@ -49,7 +49,7 @@ To change or add strings, edit `TEMPLATE_LINES` at the top of `Contents/Resource
 
 ## Requirements
 
-Glyphs 3.0 or later, including Glyphs 4.
+Glyphs 3.0 or later, including Glyphs 4. The preview API is used from Glyphs 4 build 3855 on.
 
 ## License
 
