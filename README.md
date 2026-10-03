@@ -47,7 +47,7 @@ To change or add strings, edit `TEMPLATE_LINES` at the top of `Contents/Resource
 
 ## Requirements
 
-Glyphs 4, build 3855 or later (it added the preview drawing callback). For Glyphs 3, use [version 1.0](../../releases/tag/v1.0).
+Glyphs 4, build 3855 or later (it added the preview drawing callback).
 
 ## License
 
