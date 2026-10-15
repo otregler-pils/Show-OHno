@@ -25,6 +25,7 @@ from AppKit import NSColor, NSAffineTransform, NSMenu, NSMenuItem
 from Foundation import NSObject, NSNotificationCenter
 from GlyphsApp import Glyphs, ONSTATE, OFFSTATE
 from GlyphsApp.plugins import GeneralPlugin
+import platform
 
 PLUGIN_ID = "com.pilstype.ShowOHno"
 KEY_STRING = PLUGIN_ID + ".primaryString"
@@ -45,6 +46,8 @@ TEMPLATE_LINES = [
 
 FIT_MARGIN = 0.94   # a line wider than the preview is shrunk to this share of its width
 FIT_HEIGHT = 0.92   # the letters' full height never takes more than this share of the preview
+
+MACOS_VERSION = int(platform.mac_ver()[0].split(".")[0])
 
 
 def _glyphs_build():
@@ -250,6 +253,11 @@ def _draw_line_api(line, area, scale, black, flip=False):
     bottom, top = _vertical_range(line["font"], line["masterId"], line["ascender"], line["descender"])
     x0, y0 = area.origin.x, area.origin.y
     w, h = area.size.width, area.size.height
+
+    if MACOS_VERSION >= 26:
+        y0 += 30
+        h -= 30
+
     body = max(top - bottom, 1.0)
     scale = min(scale, w * FIT_MARGIN / line["width"], h * FIT_HEIGHT / body)
     startX = x0 + (w - line["width"] * scale) / 2.0
