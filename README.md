@@ -52,3 +52,7 @@ Glyphs 4, build 3855 or later (it added the preview drawing callback).
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+## About
+
+Made by Ondřej Trégler / [Pils Type](https://pilstype.com/). More Glyphs plugins and type design tools at [pilstype.com/tools](https://pilstype.com/tools/).
